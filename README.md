@@ -10,6 +10,7 @@ Sgk Personel İşten Giriş Çıkış Yapma. TC No ile personel sorgulama.
 - İlk önce personel bilgilerini almanız ve **sgkIslemler.php** dosyasına **"POST"** metodu ile göndermeniz gerekmektedir. Neleri göndereceğinizi dosyanın içinde görebilirsiniz.
  ## ÖRNEK
   Örneğin **İşten Çıkış** yapacak iseniz: \
+  
     $workerInformation = [ \
             'tckimlikNo' => $_POST['tckimlikNo'], \
             'ad' => $_POST['ad'], \

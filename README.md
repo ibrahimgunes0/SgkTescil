@@ -2,15 +2,15 @@
 Sgk Personel İşten Giriş Çıkış Yapma. TC No ile personel sorgulama.
 
 ## SgkTescil ile neler yapılabilir?
-### 1-) Personelin TC kimlik numarası ile ilgili personelin daha önceki işe giriş ve çıkışları sorgulanabilir.
-### 2-) Personelin istenilen bilgileri ile birlikte "İşe Giriş" ve "İşten Çıkış" yapılabilir.
-### 3-) Personelin refarans kodu ile birlikte daha önce yaptığı giriş ve çıkışların PDF dökümanına ulaşılabilir.
+- Personelin TC kimlik numarası ile ilgili personelin daha önceki **İşe Giriş** ve **İşten Çıkışları** sorgulanabilir.
+- Personelin istenilen bilgileri ile birlikte **"İşe Giriş"** ve **"İşten Çıkış"** yapılabilir.
+- Personelin **refarans kodu** ile birlikte daha önce yaptığı giriş ve çıkışların PDF dökümanına ulaşılabilir.
 
 # Kullanım:
- İlk önce personel bilgilerini almanız ve sgkIslemler.php dosyasına "POST" metodu ile göndermeniz gerekmektedir. Neleri göndereceğinizi dosyanın içinde görebilirsiniz.
+- İlk önce personel bilgilerini almanız ve **sgkIslemler.php** dosyasına **"POST"** metodu ile göndermeniz gerekmektedir. Neleri göndereceğinizi dosyanın içinde görebilirsiniz.
  ## ÖRNEK
-  Örneğin İşten Çıkış yapacka iseniz:
-    $workerInformation = [
+  Örneğin **İşten Çıkış** yapacak iseniz:
+    $workerInformation = [ \
             'tckimlikNo' => $_POST['tckimlikNo'],
             'ad' => $_POST['ad'],
             'soyad' => $_POST['soyad'],
@@ -33,10 +33,11 @@ Sgk Personel İşten Giriş Çıkış Yapma. TC No ile personel sorgulama.
                 'eksikgunnedeni' => $_POST['eksikgunnedeni2'] ?: 0
             ]
         ];
-  Yukarıdaki workerInformation Arrayindeki değerleri ilgili dosyaya "POST" metodu ile gönderirseniz kodunuz çalışacaktır.
+  Yukarıdaki workerInformation Arrayindeki değerleri ilgili dosyaya **"POST"** metodu ile gönderirseniz kodunuz çalışacaktır.
 # Dikkat Edilmesi Gerekenler  
-### baglani.php dosyası yerine kendi bağlantı dosyanızı yazmalısınız.
-### Bu bir test webservisi değildir denemek için işlem yaptığınızda SGK'nın kendi sitesinden srgulayıp işlemi iptal etmeyi unutmayınız.
-### İşten Çıkış veya İşe Giriş yaparken tarihlere dikkat ediniz. Hatalı tarih girildiği taktirde cezai işlem uygulanabilir.
+- **baglanti.php** dosyası yerine kendi bağlantı dosyanızı yazmalısınız.
+- **Bu bir test webservisi değildir** denemek için işlem yaptığınızda **SGK**'nın kendi sitesinden srgulayıp işlemi iptal etmeyi unutmayınız.
+- **İşten Çıkış** veya **İşe Giriş** yaparken tarihlere dikkat ediniz. Hatalı tarih girildiği taktirde cezai işlem uygulanabilir.
 
-        
+
+
